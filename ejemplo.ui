@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1017</width>
+    <height>727</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Ejemplo de GUI en PYQT</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextEdit" name="txtNum1">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>70</y>
+      <width>291</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Ingrese un entero</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="txtNum2">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>160</y>
+      <width>291</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Ingrese un entero</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>280</y>
+      <width>541</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(85, 85, 255);
+font: 75 20pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>El resultado es:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSumar">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>70</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sumar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnCerra">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>70</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cerra Ventana</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnRestar">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>140</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Restar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnMulti">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>210</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Multiplicar</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1017</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <widget class="QMenu" name="menuIr_a_Arboles">
+     <property name="title">
+      <string>Ir a Arboles</string>
+     </property>
+     <addaction name="separator"/>
+     <addaction name="actionArboles_Hamiltonianos"/>
+     <addaction name="actionArboles_Binarios"/>
+    </widget>
+    <addaction name="menuIr_a_Arboles"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionArboles_Hamiltonianos">
+   <property name="text">
+    <string>Arboles Hamiltonianos</string>
+   </property>
+  </action>
+  <action name="actionArboles_Binarios">
+   <property name="text">
+    <string>Arboles Binarios</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnCerra</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>669</x>
+     <y>193</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>900</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
